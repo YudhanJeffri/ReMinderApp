@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.reminder.reminderapp.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_listMapelFragment"
+            app:destination="@id/listMapelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_riwayat"
+        android:name="com.reminder.reminderapp.ui.fragment.NotifikasiFragment"
+        android:label="fragment_notifikasi"
+        tools:layout="@layout/fragment_notifikasi" />
+    <fragment
+        android:id="@+id/listMapelFragment"
+        android:name="com.reminder.reminderapp.ui.fragment.ListMapelFragment"
+        android:label="fragment_list_mapel"
+        tools:layout="@layout/fragment_list_mapel" >
+        <action
+            android:id="@+id/action_listMapelFragment_to_detailMapelActivity"
+            app:destination="@id/detailMapelActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/detailMapelActivity"
+        android:name="com.reminder.reminderapp.ui.activity.DetailMapelActivity"
+        android:label="activity_detail_mapel"
+        tools:layout="@layout/activity_detail_mapel" />
+    <fragment
+        android:id="@+id/nav_report"
+        android:name="com.reminder.reminderapp.ui.fragment.LaporanFragment"
+        android:label="fragment_laporan"
+        tools:layout="@layout/fragment_laporan" />
+</navigation>

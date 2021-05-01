@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_group_38"
+        android:title="Dashboard" />
+
+
+    <item
+        android:id="@+id/nav_report"
+        android:title="" />
+
+    <item
+        android:id="@+id/nav_riwayat"
+        android:icon="@drawable/ic_riwayat_vektor_icon"
+        android:title="Notifikasi" />
+</menu>
