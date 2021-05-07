@@ -1,7 +1,6 @@
 package com.reminder.reminderapp.adapter
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,10 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.reminder.reminderapp.R
 import com.reminder.reminderapp.data.model.detailMapel.DetailMapelModel
-import com.reminder.reminderapp.data.model.mapel.MapelModel
-import com.reminder.reminderapp.ui.activity.DetailMapelActivity
 
-class DetailListAdapter(val context: Context) : RecyclerView.Adapter<DetailListAdapter.ViewHolderDetail>() {
+class NotifikasiListAdapter(val context: Context) : RecyclerView.Adapter<NotifikasiListAdapter.ViewHolderDetail>() {
     private val mData = ArrayList<DetailMapelModel>()
     fun setData(items: List<DetailMapelModel>){
         mData.clear()
@@ -44,11 +41,12 @@ class DetailListAdapter(val context: Context) : RecyclerView.Adapter<DetailListA
             }
         }
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderDetail {
         val mView = LayoutInflater.from(parent.context).inflate(
-                R.layout.item_detail_mapel,
-                parent,
-                false
+            R.layout.item_detail_mapel,
+            parent,
+            false
         )
         return ViewHolderDetail(mView)
     }

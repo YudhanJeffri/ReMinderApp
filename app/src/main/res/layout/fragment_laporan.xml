@@ -32,7 +32,15 @@
         </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
-
+    <ImageView
+        android:id="@+id/arrow_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_arrow_left"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
@@ -77,11 +85,10 @@
             app:layout_constraintTop_toBottomOf="@+id/textView9">
 
             <Spinner
-                android:id="@+id/sp_gender"
+                android:id="@+id/sp_mapel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@null"
-                android:entries="@android:array/emailAddressTypes"
                 android:overlapAnchor="false"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
@@ -100,7 +107,7 @@
         </RelativeLayout>
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/editJudul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_spinner"
@@ -112,13 +119,13 @@
             app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
         <EditText
-            android:id="@+id/editTextAlamat"
+            android:id="@+id/editDeskripsi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_spinner"
             android:layout_marginTop="18dp"
             android:gravity="top|left"
-            android:hint="Alamat Lengkap \n(Jalan, Kelurahan, Desa, Kecamatan, Kab.)"
+            android:hint="Deskripsi Tugas"
             android:inputType="textMultiLine"
             android:lines="8"
             android:maxLines="10"
@@ -131,16 +138,27 @@
             android:textSize="13sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText" />
+            app:layout_constraintTop_toBottomOf="@+id/editJudul" />
+
+        <TextView
+            android:id="@+id/tanggal_deadline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Tanggal"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/cons_deadline"
+            app:layout_constraintStart_toStartOf="@+id/cons_deadline"
+            app:layout_constraintTop_toBottomOf="@+id/editDeskripsi" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_deadline"
             android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
             android:background="@drawable/bg_tambah_deadline"
-            app:layout_constraintEnd_toEndOf="@+id/editTextAlamat"
-            app:layout_constraintStart_toStartOf="@+id/editTextAlamat"
-            app:layout_constraintTop_toBottomOf="@+id/editTextAlamat">
+            app:layout_constraintEnd_toEndOf="@+id/editDeskripsi"
+            app:layout_constraintStart_toStartOf="@+id/editDeskripsi"
+            app:layout_constraintTop_toBottomOf="@+id/tanggal_deadline">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -156,10 +174,10 @@
                 android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_regular"
                 android:text="TAMBAHKAN DEADLINE"
                 android:textColor="#EF5A5C"
                 android:textStyle="bold"
-                android:fontFamily="@font/inter_regular"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -169,6 +187,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_lapor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/btn_bg"

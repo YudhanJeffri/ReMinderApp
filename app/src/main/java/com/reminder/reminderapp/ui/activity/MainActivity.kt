@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupWithNavController(binding.bottomNavigationMain, navigation)
         navigation.addOnDestinationChangedListener { controller: NavController?, destination: NavDestination, arguments: Bundle? ->
             val destination = destination.id
-            if (destination == R.id.listMapelFragment || destination == R.id.detailMapelActivity )
+            if (destination == R.id.listMapelFragment || destination == R.id.detailMapelActivity || destination == R.id.nav_report)
              hidebottomnav() else showbottomnav()
         }
     }

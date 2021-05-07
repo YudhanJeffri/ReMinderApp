@@ -6,7 +6,7 @@ import android.os.Parcelable
 data class DetailMapelModel(
         var created_at: String?,
         var jam_created: String?,
-        var deadline_tanggal: String?,
+        var deadline: String?,
         var deadline_jam: String?,
         var deskripsi_tugas: String?,
         var id: Int,
